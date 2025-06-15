@@ -8,8 +8,6 @@ dotenv.config();
 const app = express();
 const PORT = 5000;
 
-import cors from "cors";
-
 const allowedOrigins = [process.env.ALLOWED_ORIGIN];
 
 app.use(
