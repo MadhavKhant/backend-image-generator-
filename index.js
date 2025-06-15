@@ -50,6 +50,15 @@ app.post("/generate-image", async (req, res) => {
   }
 });
 
+app.get("/health", (req, res) => {
+  res.json({ status: "ok" });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);
 });
+
+app.get("/", (req, res) => {
+  res.send("Backend is working ✅");
+});
+
