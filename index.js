@@ -10,9 +10,7 @@ const PORT = 5000;
 
 import cors from "cors";
 
-const allowedOrigins = [
-  "https://new-gemini-and-image-generator.vercel.app/", // 👈 your deployed Vercel frontend URL
-];
+const allowedOrigins = [process.env.ALLOWED_ORIGIN];
 
 app.use(
   cors({
